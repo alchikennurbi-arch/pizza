@@ -1,0 +1,181 @@
+[
+  {
+    "id": 1,
+    "logo": "./images/Screenshot 2026-02-09 at 10.58.57.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 2,
+    "logo": "./images/Screenshot 2026-02-09 at 10.59.14.png",
+    "position": "Cheesy ",
+    "role": "Pizza",
+    "level": "Mozzarella cheese, cheddar cheese, parmesan cheese, Alfredo sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 3,
+    "logo": "./images/Screenshot 2026-02-09 at 10.59.24.png",
+    "position": "Chicken Teriyaki",
+    "role": "Pizza",
+    "level": "Our legendary pizza. Chicken pieces, bell pepper, sweet chili sauce, mozzarella, cheese blend, onion, Alfredo sauce.",
+    "price": "from 1,890 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 4,
+    "logo": "./images/Screenshot 2026-02-09 at 10.59.59.png",
+    "position": "Pizza Halves",
+    "role": "Pizza",
+    "level": "Create your own 35cm pizza from two",
+    "price": "from 4,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 5,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.37.png",
+    "position": "Steppe BBQ",
+    "role": "Pizza",
+    "level": "Spicy beef, chicken ham, BBQ sauce, tomatoes, red onion, mozzarella, signature tomato sauce",
+    "contract": "Not Available"
+  },
+  {
+    "id": 6,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.15.png",
+    "position": "Shrimps with pesto",
+    "role": "Pizza",
+    "level": "Shrimps, tomatoes, champignons, mozzarella cheese, Italian seasoning, marinara sauce",
+    "price": "from 2,550 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 7,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.32.png",
+    "position": "Chicken burger",
+    "role": "Pizza",
+    "level": "Chicken, tomatoes, burger sauce, garlic, mozzarella cheese, alfredo sauce",
+    "price": "from 1,590 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 8,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.09.png",
+    "position": "Chill Grill",
+    "role": "Pizza",
+    "level": "Double chicken, pickles, red onion, grill tasty sauce, mozzarella, garlic, signature alfredo sauce",
+    "price": "from 1,900 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 9,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.23.png",
+    "position": "Ham & Cheese",
+    "role": "Pizza",
+    "level": "Chicken ham, mozzarella cheese, Alfredo sauce",
+    "price": "from 1,790 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 10,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.51.png",
+    "position": "Double Chicken",
+    "role": "Pizza",
+    "level": "Double chicken, mozzarella cheese, Alfredo sauce",
+    "price": "from 1,650 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 11,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.30.png",
+    "position": "Arriva!",
+    "role": "Pizza",
+    "level": "Chicken, chicken chorizo, burger sauce, sweet pepper, red onion, tomatoes, mozzarella cheese, ranch sauce, garlic",
+    "price": "from 1,890 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 12,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.25.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 13,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.51.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 14,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.39.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 15,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.01.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 16,
+    "logo": "./images/Screenshot 2026-02-09 at 11.00.56.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 17,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.08.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 18,
+    "logo": "./images/Screenshot 2026-02-09 at 10.58.57.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 19,
+    "logo": "./images/Screenshot 2026-02-09 at 11.01.49.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  },
+  {
+    "id": 20,
+    "logo": "./images/Screenshot 2026-02-09 at 10.59.03.png",
+    "position": "Chorizo fresh ",
+    "role": "Pizza",
+    "level": "Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce",
+    "price": "from 1,400 тг.",
+    "contract": "Select"
+  }
+]

@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magan Pizza</title>
+    <style>
+      .footer {
+        background-color: #181818;
+        color: white;
+        padding: 60px 80px 30px;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: b;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 200px;
+      }
+
+      .footer-column h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .footer-column a {
+        color: #cccccc;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+
+      .footer-column a:hover {
+        color: white;
+      }
+
+      .footer-apps {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-apps img {
+        height: 40px;
+        cursor: pointer;
+      }
+
+      .footer-middle {
+        border-top: 1px solid #333;
+        padding: 40px 0;
+      }
+
+      .stats {
+        display: flex;
+        gap: 100px;
+      }
+
+      .stat-item h2 {
+        font-size: 28px;
+        margin: 0;
+      }
+
+      .stat-item p {
+        font-size: 14px;
+        color: #999;
+        margin-top: 10px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-info {
+        display: flex;
+        gap: 30px;
+        font-size: 13px;
+        color: #999;
+      }
+
+      .footer-info a {
+        color: #999;
+        text-decoration: none;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icon {
+        width: 32px;
+        height: 32px;
+        background: #333;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.2s;
+      }
+
+      .social-icon:hover {
+        background: #444;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fcfcfc;
+      }
+
+      header {
+        color: white;
+        background-color: rgb(255, 89, 0);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .tag {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 500;
+      }
+      .tag:hover {
+        color: #000;
+      }
+      .first_types {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+        padding: 20px 60px;
+      }
+
+      .cards {
+        width: calc((100% / 4) - 20px);
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+      .cards:hover {
+        transform: translateY(-5px);
+      }
+
+      .card_item {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+
+      .card_item img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .card_item h3 {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .card_item p {
+        font-size: 14px;
+        color: #666;
+        flex-grow: 1;
+      }
+
+      .price-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      .select-btn {
+        background: rgb(255, 89, 0);
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+      }
+
+      .modal-content {
+        background: white;
+        width: 850px;
+        max-width: 95%;
+        border-radius: 24px;
+        position: relative;
+        padding: 40px;
+        animation: slideUp 0.3s ease-out;
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .modal-flex {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .modal-left {
+        flex: 1;
+        text-align: center;
+      }
+      .modal-left img {
+        width: 100%;
+        max-width: 350px;
+      }
+      .modal-right {
+        flex: 1;
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #999;
+      }
+
+      .size-selector {
+        display: flex;
+        background: #f3f3f7;
+        border-radius: 12px;
+        padding: 4px;
+        margin: 20px 0;
+      }
+      .size-selector span {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 14px;
+      }
+      .size-selector .active {
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #addToCartBtn {
+        background: rgb(255, 89, 0);
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .pngg {
+      }
+      .pngg:hover {
+        opacity: rgba(0, 0, 0, 0.513);
+        background-color: rgba(0, 0, 0, 0.517);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div style="display: flex; align-items: center; gap: 30px">
+          <img width="70px" src="assets/logo-removebg-preview.png" alt="Logo" />
+          <span class="tag">Pizza</span>
+          <span class="tag">Combo</span>
+          <span class="tag">Promotions</span>
+          <span class="tag">New</span>
+          <span class="tag">Drinks</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px">
+          <button
+            style="
+              background-color: rgb(255, 89, 0);
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              padding: 8px 15px;
+              border-radius: 20px;
+              color: white;
+              border: 2px solid white;
+              cursor: pointer;
+            "
+          >
+            My order |
+            <p id="cart-count">0</p>
+          </button>
+          <span style="font-weight: bold">Magan Pizza</span>
+        </div>
+      </header>
+
+      <div
+        class="center"
+        style="position: relative; height: 80vh; overflow: hidden"
+      >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          style="width: 100%; height: 100%; object-fit: cover"
+        >
+          <source
+            src="video/mixkit-close-up-shot-of-a-pepperoni-pizza-44001-hd-ready.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div
+          style="
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+          "
+        >
+          <h2 style="font-size: 80px; margin: 0">ORDER RIGHT NOW</h2>
+          <h2 style="font-size: 60px; color: rgb(255, 89, 0); margin: 0">
+            MAGAN-PIZZA
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic <br />
+            repellat sunt dicta eius quibusdam rerum, porro odio <br />
+            aliquam, obcaecati animi dolorem qui modi est
+          </p>
+          <button
+            style="
+              margin-top: 30px;
+              padding: 15px 40px;
+              background: rgb(255, 89, 0);
+              color: white;
+              border: none;
+              border-radius: 30px;
+              font-size: 20px;
+              cursor: pointer;
+            "
+          >
+            View Menu
+          </button>
+        </div>
+      </div>
+
+      <div id="pizza-section">
+        <h1 style="padding-left: 60px; margin-top: 40px">Pizza</h1>
+        <div class="first_types"></div>
+      </div>
+    </div>
+
+    <div id="pizzaModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-flex">
+          <div class="modal-left">
+            <img id="modalImg" src="" alt="Pizza" />
+          </div>
+          <div class="modal-right">
+            <h2 id="modalTitle" style="margin: 0"></h2>
+            <p style="color: #999; margin: 5px 0">
+              30 cm, traditional dough, 490 g
+            </p>
+            <p
+              id="modalDesc"
+              style="line-height: 1.5; color: #444; margin-top: 15px"
+            ></p>
+
+            <div class="size-selector">
+              <span>20 cm</span>
+              <span class="active">30 cm</span>
+              <span>35 cm</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr)">
+              <img
+                class="pngg"
+                width="140px"
+                src="additional/Screenshot 2026-02-09 at 20.41.13.png"
+                alt=""
+              />
+              <img
+                class="pngg"
+                width="140px"
+                src="additional/Screenshot 2026-02-09 at 20.41.20.png"
+                alt=""
+              />
+              <img
+                class="pngg"
+                width="140px"
+                src="additional/Screenshot 2026-02-09 at 20.41.26.png"
+                alt=""
+              />
+            </div>
+
+            <button id="addToCartBtn">
+              Add to Cart for <span id="modalPrice"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-column">
+          <h4>Partnership</h4>
+          <a href="#">Franchising</a>
+          <a href="#">Investments</a>
+          <a href="#">Suppliers</a>
+          <a href="#">Propose a property</a>
+        </div>
+        <div class="footer-column">
+          <h4>Interesting facts</h4>
+          <a href="#">Excursions and workshops</a>
+          <a href="#">Why do we not use gloves at MAGAN Pizza?</a>
+        </div>
+        <div class="footer-column">
+          <h4>Store info</h4>
+          <a href="tel:+77719444004">+7 705 241 82 95</a>
+          <a href="mailto:feedback@dodopizza.kz">feedback@MAGANpizza.kz</a>
+        </div>
+        <div class="footer-apps">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+            alt="App Store"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+            alt="Google Play"
+          />
+        </div>
+      </div>
+
+      <div class="footer-middle">
+        <div class="stats">
+          <div class="stat-item">
+            <h2>1,299,808,274 тг.</h2>
+            <p>
+              Revenue of the Kazakh network this month<br />Last month —
+              5,130,847,067 тг.
+            </p>
+          </div>
+          <div class="stat-item">
+            <h2>1435 pizzerias</h2>
+            <p>26 countries</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-info">
+          <span>MAGAN PIZZA 2026</span>
+          <a href="#">Legal information</a>
+          <a href="#">Nutrition</a>
+        </div>
+        <div class="social-links">
+          <div class="social-icon">f</div>
+          <div class="social-icon">ig</div>
+          <div class="social-icon">tw</div>
+          <div class="social-icon">yt</div>
+          <div class="social-icon">tk</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const first_types = document.querySelector(".first_types");
+      const modal = document.getElementById("pizzaModal");
+      const closeBtn = document.querySelector(".close-btn");
+
+      async function add() {
+        try {
+          const response = await fetch("./data.json");
+          const data = await response.json();
+
+          first_types.innerHTML = "";
+
+          data.forEach((item) => {
+            const cards = document.createElement("div");
+            cards.classList.add("cards");
+
+            cards.innerHTML = `
+                <div class="card_item">
+                    <img src="${item.logo}" alt="${item.position}" />
+                    <h3>${item.position}</h3>
+                    <p>${item.level}</p>
+                    <div class="price-row">
+                        <strong style="font-size: 18px;">${item.price || "from 1,400 тг."}</strong>
+                        <button class="select-btn">Select</button>
+                    </div>
+                </div>`;
+
+            cards.addEventListener("click", () => {
+              document.getElementById("modalImg").src = item.logo;
+              document.getElementById("modalTitle").innerText = item.position;
+              document.getElementById("modalDesc").innerText = item.level;
+              document.getElementById("modalPrice").innerText =
+                item.price || "1,400 тг.";
+              modal.style.display = "flex";
+            });
+
+            first_types.appendChild(cards);
+          });
+        } catch (error) {
+          console.error("Error loading pizza data:", error);
+        }
+      }
+
+      closeBtn.onclick = () => (modal.style.display = "none");
+      window.onclick = (e) => {
+        if (e.target == modal) modal.style.display = "none";
+      };
+
+      let cartItems = 0;
+      const cartCountDisplay = document.getElementById("cart-count");
+
+      const addToCartBtn = document.getElementById("addToCartBtn");
+
+      addToCartBtn.addEventListener("click", () => {
+        cartItems++;
+
+        cartCountDisplay.innerText = cartItems;
+
+        modal.style.display = "none";
+
+        console.log("Тауар себетке қосылды! Жалпы саны: " + cartItems);
+      });
+
+      add();
+    </script>
+  </body>
+</html>
